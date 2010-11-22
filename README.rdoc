@@ -1,0 +1,16 @@
+=RaphelJS-Infobox
+
+This is a simple JS helper that automates placement of HTML elements inside of RaphaelJS Containers.
+This script requires jQuery to operate though it could be modified to work without if you really wanted to.
+
+==Quick Start
+
+var paper = Raphael("raphael-canvas", 500, 500);
+var infobox = new Infobox(paper, {x:10,y:10, width:250, height:250});
+infobox.div.html('<p>This is some crazy content that goes inside of that box that will wrap around.</p>');
+
+==Notes
+
+1. It must be loaded on document ready to account for order and scrollbars across all RaphaelJS supported browsers.
+2. Yes, you can put a youtube video in it if you want
+3. The show() and hide() methods are just examples of what you can do to couple behaviors between the HTML and the SVG element.
