@@ -8,9 +8,9 @@
     this.paper = r;
     this.x = options.x || 0;
     this.y = options.y || 0;
-    this.width = options.width || 250;
-    this.height = options.height || 245;
-    this.rounding = options.rounding || 10;
+    this.width = options.width || this.paper.width;
+    this.height = options.height || this.paper.height;
+    this.rounding = options.rounding || 0;
     this.show_border = options.with_border || false;
     this.container = this.paper.rect(this.x, this.y, this.width, this.height, this.rounding).attr(attrs);
     var container_id = this.container.node.parentNode.parentNode.id;
