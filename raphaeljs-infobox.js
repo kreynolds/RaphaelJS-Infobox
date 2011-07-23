@@ -11,12 +11,15 @@
     this.width = options.width || 250;
     this.height = options.height || 245;
     this.rounding = options.rounding || 10;
+    this.show_border = options.with_border || false;
     this.container = this.paper.rect(this.x, this.y, this.width, this.height, this.rounding).attr(attrs);
     var container_id = this.container.node.parentNode.parentNode.id;
     container_id = container_id || this.container.node.parentNode.parentNode.parentNode.id;
     this.raph_container = jQuery('#' + container_id);
     
-    this.div = jQuery('<div style="position: absolute; overflow: auto; width: 0; height: 0; display: none"></div>').insertAfter(this.raph_container);
+    if (!this.show_border) { this.container.hide(); }
+    
+    this.div = jQuery('<div style="position: absolute; overflow: auto; width: 0; height: 0;"></div>').insertAfter(this.raph_container);
     jQuery(document).bind('ready', this, function(event) { event.data.update(); });
     jQuery(window).bind('resize', this, function(event) { event.data.update(); });
   }
