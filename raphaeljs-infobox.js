@@ -1,5 +1,5 @@
-// Copyright 2010: Kelley Reynolds, Inside Systems Inc.
-// http://blog.insidesystems.net/embedding-arbitrary-html-into-raphaeljs
+// Copyright 2012: Kelley Reynolds, RubyScale
+// http://rubyscale.com/blog/2010/11/22/embedding-arbitrary-html-into-raphaeljs/
 
 // Takes a raphaeljs object, some options, and some container attributes
   function Infobox(r, options, attrs) {

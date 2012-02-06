@@ -5,12 +5,13 @@ This script requires jQuery to operate though it could be modified to work witho
 
 ==Quick Start
 
-var paper = Raphael("raphael-canvas", 500, 500);
-var infobox = new Infobox(paper, {x:10,y:10, width:250, height:250});
-infobox.div.html('<p>This is some crazy content that goes inside of that box that will wrap around.</p>');
+  var paper = Raphael("raphael-canvas", 500, 500);
+  var infobox = new Infobox(paper, {x:10,y:10, width:250, height:250});
+  infobox.div.html('<p>This is some crazy content that goes inside of that box that will wrap around.</p>');
 
 ==Notes
 
 1. It must be loaded on document ready to account for order and scrollbars across all RaphaelJS supported browsers.
 2. Yes, you can put a youtube video in it if you want
 3. The show() and hide() methods are just examples of what you can do to couple behaviors between the HTML and the SVG element.
+4. The canvas must be invoked using a container element as above. Otherwise, jQuery will not be able to find the offsets and a TypeError will result.
